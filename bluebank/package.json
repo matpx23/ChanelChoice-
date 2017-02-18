@@ -1,0 +1,19 @@
+{
+  "name": "bluebank-api",
+  "version": "1.0.0",
+  "description": "A module to provide access to banking services provided by Blue Bank - RBS & Ulster Bank. (Created in BankOfAPIs hackathon - Dublin, February 2017.)",
+  "main": "demo.js",
+  "keywords": ["bank", "banking services", "blue bank","BlueBank", "Hackathon"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/kymarkak/ulsterbank-hackathon-2017"
+  },
+  "author": "Kyriakos Markakis",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
