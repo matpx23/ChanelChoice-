@@ -1,8 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Updates
+    </ion-title>
+  </ion-navbar>
+</ion-header>
 <ion-content>
   <ion-card *ngFor="let message of chats">
     <ion-item>
       <ion-avatar item-left>
-        <div class="card-icon">S</div>
+        <img src="../../assets/logo.png"/>
       </ion-avatar>
       <h2>{{message.need}} - {{message.subject}}</h2>
       <p>{{message.at}}</p>
