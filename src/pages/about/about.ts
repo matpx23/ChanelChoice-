@@ -14,6 +14,7 @@ export class AboutPage {
   chat_input: string;
   sanitizer: any;
   chats = [];
+  raw = [];
   static get parameters() {
     return [NavController,DomSanitizer];
   }
@@ -22,7 +23,8 @@ export class AboutPage {
     this.chats = [];
     this.socket = io('http://channelchoice.azurewebsites.net');
     this.socket.on('update', (msg) => {
-      this.chats.push(msg);
+      this.raw.push(msg);
+      this.chats = this.raw.reverse();
       console.log('note recived');
       LocalNotifications.schedule({
         id: 1,
