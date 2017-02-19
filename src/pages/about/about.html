@@ -1,40 +1,16 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Updates
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content>
-  <ul class="list">
-    <li class="item">
-    <ion-card>
+  <ion-card *ngFor="let message of chats">
     <ion-item>
-           <ion-avatar item-left>
-            <div class="card-icon">S</div>
-          </ion-avatar>
-          <h2>Something has changed..</h2>
-          <p>Jan 5, 2017</p>
-        </ion-item>
-        <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-        </ion-card-content>
-      </ion-card>
-    </li>
-    <li class="item">
-      <ion-card>
-        <ion-item>
-          <ion-avatar item-left>
-            <div class="card-icon">S</div>
-          </ion-avatar>
-          <h2>Something has changed..</h2>
-          <p>Jan 5, 2017</p>
-        </ion-item>
-        <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-        </ion-card-content>
-      </ion-card>
-    </li>
-  </ul>
+      <ion-avatar item-left>
+        <div class="card-icon">S</div>
+      </ion-avatar>
+      <h2>{{message.need}} - {{message.subject}}</h2>
+      <p>{{message.at}}</p>
+    </ion-item>
+    <ion-card-content>
+      <p>{{message.text}}</p>
+      <iframe [src]="transform(message.video)" frameborder="0" allowfullscreen></iframe>
+      <p></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
