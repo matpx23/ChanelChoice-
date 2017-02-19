@@ -1,17 +1,17 @@
 <ion-content padding>
   <div class="balance">
     <p class="title">Current Balance</p>
-    <p class="total">£2,387</p>
+    <p class="total">£{{total}}</p>
   </div>
   <div id="bar" class="chart chart-line">
   </div>
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let tran of trans">
       <ion-icon name="card" item-left>
       </ion-icon>
-      Cancer Research
-      <p>Jan, 5, 2017 12:32</p>
-      <span class="plus value">+ £32.00</span>
+      {{tran.transactionDescription}}
+      <p>{{tran.transactionDateTime}}</p>
+      <span class="plus value">£{{tran.transactionAmount}}</span>
     </ion-item>
     <ion-item>
       <ion-icon name="plane" item-left>
