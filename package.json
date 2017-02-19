@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.1.0",
+    "ng2-chartjs2": "^1.2.0",
     "typescript": "2.0.9"
   },
   "cordovaPlugins": [
